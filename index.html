@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venture Capital — The Complete Industry Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #009A44;
+    --green-dark: #007A36;
+    --green-light: #E6F5EC;
+    --green-mid: #00C557;
+    --charcoal: #1D1D1D;
+    --charcoal-mid: #2D2D2D;
+    --gray-90: #3A3A3A;
+    --gray-70: #5A5A5A;
+    --gray-50: #888888;
+    --gray-20: #CCCCCC;
+    --gray-10: #E8E8E8;
+    --gray-05: #F4F4F4;
+    --white: #FFFFFF;
+    --india-saffron: #FF9933;
+    --india-navy: #000080;
+    --india-green: #138808;
+    --border: #E0E0E0;
+    --ff-display: 'Fraunces', Georgia, serif;
+    --ff-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--ff-body);
+    font-weight: 400;
+    color: var(--charcoal);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: var(--white);
+    border-bottom: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 64px; height: 60px;
+  }
+  .nav-logo {
+    font-family: var(--ff-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+  .nav-links {
+    display: flex; gap: 0; list-style: none;
+  }
+  .nav-links a {
+    color: var(--gray-70);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0 18px;
+    height: 60px;
+    display: flex; align-items: center;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover { color: var(--green); border-bottom-color: var(--green); }
+
+  /* ─── HERO ────────────────────────────────────── */
+  .hero {
+    background: var(--charcoal);
+    min-height: 100vh;
+    padding: 60px 64px 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg-lines {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(0,154,68,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,154,68,0.07) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-accent-bar {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--green);
+  }
+  .hero-content {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 0 60px;
+    position: relative;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 32px; height: 2px;
+    background: var(--green);
+  }
+  .hero h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 300;
+    line-height: 1.0;
+    color: var(--white);
+    max-width: 800px;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--green-mid); }
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    max-width: 500px;
+    line-height: 1.75;
+    margin-bottom: 0;
+  }
+  .hero-stats-bar {
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hero-stat {
+    padding: 36px 0 40px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    padding-right: 32px;
+    padding-left: 0;
+  }
+  .hero-stat:not(:first-child) { padding-left: 32px; }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat-value {
+    font-family: var(--ff-display);
+    font-size: 44px;
+    font-weight: 300;
+    color: var(--green-mid);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: rgba(255,255,255,0.35);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ─── SECTION SHELLS ──────────────────────────── */
+  section { padding: 96px 64px; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--green);
+  }
+  .section-title {
+    font-family: var(--ff-display);
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .section-title em { font-style: italic; color: var(--green); }
+  .section-lead {
+    font-size: 16px;
+    color: var(--gray-70);
+    max-width: 600px;
+    line-height: 1.75;
+    font-weight: 400;
+    margin-bottom: 56px;
+  }
+
+  /* ─── WHAT IS VC ──────────────────────────────── */
+  #what { background: var(--white); }
+  .what-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .pull-quote {
+    font-family: var(--ff-display);
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.45;
+    border-left: 3px solid var(--green);
+    padding-left: 24px;
+    margin: 36px 0;
+  }
+  .what-right p {
+    font-size: 15px;
+    color: var(--gray-70);
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .bcg-card {
+    background: var(--green);
+    color: var(--white);
+    padding: 36px;
+    margin-top: 28px;
+    border-left: 4px solid var(--green-dark);
+  }
+  .bcg-card h4 {
+    font-family: var(--ff-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 14px;
+  }
+  .bcg-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.75;
+  }
+  .bcg-card-dark {
+    background: var(--charcoal);
+    border-left-color: var(--green);
+  }
+
+  /* ─── ECOSYSTEM ───────────────────────────────── */
+  #ecosystem { background: var(--gray-05); }
+  .eco-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .eco-card {
+    background: var(--white);
+    padding: 32px 28px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .eco-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .eco-card:hover::after { transform: scaleX(1); }
+  .eco-card:hover { background: var(--green-light); }
+  .eco-num {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gray-20);
+    margin-bottom: 16px;
+    font-family: var(--ff-body);
+    text-transform: uppercase;
+  }
+  .eco-card h3 {
+    font-family: var(--ff-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .eco-card p {
+    font-size: 12.5px;
+    color: var(--gray-70);
+    line-height: 1.7;
+  }
+  .eco-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 3px 10px;
+    margin-top: 16px;
+  }
+
+  /* ─── FUNDING STAGES ──────────────────────────── */
+  #stages { background: var(--charcoal); }
+  #stages .section-title { color: var(--white); }
+  #stages .section-lead { color: rgba(255,255,255,0.5); }
+  .stages-list { display: flex; flex-direction: column; }
+  .stage-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    align-items: start;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 32px 0;
+    gap: 48px;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .stage-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stage-row:hover { background: rgba(0,154,68,0.05); }
+  .stage-label {
+    font-family: var(--ff-display);
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--green-mid);
+  }
+  .stage-sub {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.25);
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  .stage-body h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .stage-body p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.48);
+    line-height: 1.8;
+  }
+  .stage-meta { text-align: right; }
+  .stage-range {
+    font-family: var(--ff-display);
+    font-size: 20px;
+    color: var(--white);
+    display: block;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .stage-equity {
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .stage-examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; justify-content: flex-end; }
+  .ex-tag {
+    font-size: 10px;
+    padding: 3px 10px;
+    border: 1px solid rgba(0,197,87,0.2);
+    color: var(--green-mid);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ─── DEAL PROCESS ────────────────────────────── */
+  #process { background: var(--white); }
+  .process-steps { position: relative; }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    left: 19px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--green), transparent);
+    opacity: 0.25;
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 28px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .step-num {
+    width: 40px; height: 40px;
+    border: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green);
+    background: var(--white);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.02em;
+  }
+  .step-content {
+    padding-top: 8px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .process-step:last-child .step-content { border-bottom: none; }
+  .step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .step-duration {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .step-content p {
+    font-size: 14px;
+    color: var(--gray-70);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+  .step-pills {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;
+  }
+  .pill {
+    font-size: 10px;
+    background: var(--gray-05);
+    color: var(--gray-70);
+    padding: 4px 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+  }
+
+  /* ─── KEY PLAYERS ─────────────────────────────── */
+  #players { background: var(--gray-05); }
+  .players-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .player-card {
+    background: var(--white);
+    padding: 36px 32px;
+    transition: background 0.2s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    border-left: 0px solid var(--green);
+    transition: all 0.25s;
+  }
+  .player-card:hover { background: var(--white); border-left: 4px solid var(--green); }
+  .player-founded {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--gray-50);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .player-card h3 {
+    font-family: var(--ff-display);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+  .player-card p {
+    font-size: 13px;
+    color: var(--gray-70);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+  .player-investments { display: flex; flex-wrap: wrap; gap: 6px; }
+  .inv-tag {
+    font-size: 10px;
+    padding: 3px 10px;
+    background: var(--gray-05);
+    color: var(--charcoal);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+  }
+
+  /* ─── MARKET DATA ─────────────────────────────── */
+  #market { background: var(--white); }
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .market-stat {
+    background: var(--white);
+    padding: 40px 36px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .market-stat:hover { border-left-color: var(--green); }
+  .market-stat-value {
+    font-family: var(--ff-display);
+    font-size: 48px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .market-stat-label {
+    font-size: 13px;
+    color: var(--charcoal);
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .market-stat-detail {
+    font-size: 10px;
+    color: var(--gray-50);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .market-insights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .insight-box {
+    background: var(--white);
+    padding: 36px;
+    border-left: 3px solid var(--green);
+  }
+  .insight-box h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .insight-box p {
+    font-size: 13px;
+    color: var(--gray-70);
+    line-height: 1.75;
+  }
+  .insight-box ul { list-style: none; margin-top: 0; }
+  .insight-box li {
+    font-size: 13px;
+    color: var(--gray-70);
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between;
+    align-items: center;
+  }
+  .insight-box li:last-child { border-bottom: none; }
+  .insight-box li span {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+
+  /* ─── INDIA SECTION ───────────────────────────── */
+  #india {
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+  #india::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--india-saffron) 33%, var(--white) 33% 66%, var(--india-green) 66%);
+  }
+  .india-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+  .india-intro .section-title { color: var(--white); }
+  .india-intro .section-label { color: var(--india-saffron); }
+  .india-intro .section-label::before { background: var(--india-saffron); }
+  .india-intro p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .india-stats-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    align-self: start;
+  }
+  .india-stat-cell {
+    background: var(--charcoal);
+    padding: 32px 28px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .india-stat-cell:hover { border-left-color: var(--india-saffron); }
+  .india-stat-val {
+    font-family: var(--ff-display);
+    font-size: 38px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--india-saffron);
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .india-stat-lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  /* India ecosystem tabs */
+  .india-tabs {
+    display: flex; gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 48px;
+  }
+  .india-tab {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    padding: 14px 28px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .india-tab.active, .india-tab:hover {
+    color: var(--india-saffron);
+    border-bottom-color: var(--india-saffron);
+  }
+
+  /* India firms grid */
+  .india-firms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 48px;
+  }
+  .india-firm-card {
+    background: var(--charcoal-mid);
+    padding: 32px 28px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .india-firm-card:hover { border-left-color: var(--india-saffron); background: rgba(255,153,51,0.04); }
+  .india-firm-hq {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 10px;
+  }
+  .india-firm-card h3 {
+    font-family: var(--ff-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .india-firm-card p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .india-firm-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .india-firm-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border: 1px solid rgba(255,153,51,0.25);
+    color: var(--india-saffron);
+  }
+
+  /* India unicorns */
+  .unicorn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .unicorn-card {
+    background: var(--charcoal-mid);
+    padding: 24px 22px;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .unicorn-card:hover { background: rgba(19,136,8,0.08); }
+  .unicorn-sector {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--india-saffron);
+    margin-bottom: 8px;
+  }
+  .unicorn-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .unicorn-val {
+    font-family: var(--ff-display);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--green-mid);
+    font-weight: 300;
+  }
+  .unicorn-backers {
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  /* India sectors */
+  .india-sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .india-sector-card {
+    background: var(--charcoal-mid);
+    padding: 28px;
+  }
+  .india-sector-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .india-sector-share {
+    font-family: var(--ff-display);
+    font-size: 32px;
+    font-style: italic;
+    color: var(--india-saffron);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .india-sector-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+  }
+
+  /* India hubs */
+  .india-hubs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .india-hub-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px;
+    border-top: 3px solid var(--india-saffron);
+  }
+  .india-hub-city {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .india-hub-nickname {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--india-saffron);
+    margin-bottom: 14px;
+  }
+  .india-hub-desc {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+  }
+  .india-hub-firms {
+    margin-top: 14px;
+    display: flex; flex-wrap: wrap; gap: 5px;
+  }
+  .india-hub-firm-tag {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    background: rgba(255,153,51,0.08);
+    color: rgba(255,153,51,0.7);
+    border: 1px solid rgba(255,153,51,0.15);
+  }
+
+  /* India tab panels */
+  .india-panel { display: none; }
+  .india-panel.active { display: block; }
+
+  /* ─── GLOSSARY ─────────────────────────────────── */
+  #glossary { background: var(--gray-05); }
+  .glossary-categories {
+    display: flex; gap: 0; flex-wrap: wrap;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    display: inline-flex;
+    overflow: hidden;
+  }
+  .cat-btn {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: none;
+    border-right: 1px solid var(--border);
+    background: var(--white);
+    color: var(--gray-70);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .cat-btn:last-child { border-right: none; }
+  .cat-btn.active, .cat-btn:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .glossary-item {
+    background: var(--white);
+    padding: 28px 32px;
+    cursor: default;
+    transition: background 0.2s;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .glossary-item:hover { background: var(--green-light); border-left-color: var(--green); }
+  .glossary-item.hidden { display: none; }
+  .glossary-term {
+    font-family: var(--ff-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  .glossary-cat-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .glossary-def {
+    font-size: 13px;
+    color: var(--gray-70);
+    line-height: 1.75;
+  }
+
+  /* ─── APPROACH ─────────────────────────────────── */
+  #approach { background: var(--white); }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+  .approach-left h3 {
+    font-family: var(--ff-display);
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+  .approach-left p {
+    font-size: 14px;
+    color: var(--gray-70);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .checklist { list-style: none; margin-top: 28px; }
+  .checklist li {
+    display: flex; gap: 16px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--gray-70);
+    line-height: 1.6;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .check-icon {
+    width: 18px; height: 18px;
+    border: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .check-icon::after {
+    content: '✓';
+    font-size: 10px;
+    color: var(--green);
+    font-weight: 700;
+  }
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .do-box, .dont-box {
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+  }
+  .do-box { border-top: 3px solid var(--green); }
+  .dont-box { border-top: 3px solid #CC3333; }
+  .do-box h4 { color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+  .dont-box h4 { color: #CC3333; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+  .do-box li, .dont-box li {
+    font-size: 12.5px;
+    color: var(--gray-70);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    list-style: none;
+    line-height: 1.5;
+  }
+  .do-box li:last-child, .dont-box li:last-child { border-bottom: none; }
+
+  /* ─── FOOTER ──────────────────────────────────── */
+  footer {
+    background: var(--charcoal);
+    padding: 64px 64px 40px;
+    border-top: 3px solid var(--green);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .footer-brand-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+  .footer-tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+  .footer-col h5 {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    padding: 6px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .footer-col li:hover { color: rgba(255,255,255,0.8); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    max-width: 420px;
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  /* ─── SCROLL ANIM ─────────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 1100px) {
+    nav { padding: 0 32px; }
+    section { padding: 80px 32px; }
+    .hero { padding: 60px 32px 0; }
+    .hero-stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .what-grid { grid-template-columns: 1fr; }
+    .eco-grid { grid-template-columns: repeat(2, 1fr); }
+    .players-grid { grid-template-columns: repeat(2, 1fr); }
+    .market-grid { grid-template-columns: repeat(2, 1fr); }
+    .india-hero { grid-template-columns: 1fr; }
+    .india-firms-grid { grid-template-columns: repeat(2, 1fr); }
+    .unicorn-grid { grid-template-columns: repeat(2, 1fr); }
+    .india-sectors-grid { grid-template-columns: repeat(2, 1fr); }
+    .india-hubs-grid { grid-template-columns: 1fr 1fr; }
+    .approach-grid { grid-template-columns: 1fr; }
+    .stage-row { grid-template-columns: 160px 1fr; }
+    .stage-meta { display: none; }
+    footer { padding: 48px 32px 32px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .glossary-categories { display: flex; overflow: visible; flex-wrap: wrap; }
+  }
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 60px 20px; }
+    .hero { padding: 60px 20px 0; }
+    .hero-stats-bar { grid-template-columns: 1fr 1fr; }
+    .eco-grid { grid-template-columns: 1fr; }
+    .players-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .market-insights { grid-template-columns: 1fr; }
+    .india-stats-col { grid-template-columns: 1fr 1fr; }
+    .india-firms-grid { grid-template-columns: 1fr; }
+    .unicorn-grid { grid-template-columns: 1fr 1fr; }
+    .india-sectors-grid { grid-template-columns: 1fr; }
+    .india-hubs-grid { grid-template-columns: 1fr; }
+    .glossary-grid { grid-template-columns: 1fr; }
+    .do-dont { grid-template-columns: 1fr; }
+    .stage-row { grid-template-columns: 1fr; }
+    footer { padding: 40px 20px 24px; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .footer-disclaimer { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    Venture Capital Guide
+  </div>
+  <ul class="nav-links">
+    <li><a href="#what">Overview</a></li>
+    <li><a href="#ecosystem">Ecosystem</a></li>
+    <li><a href="#stages">Stages</a></li>
+    <li><a href="#process">Deal Process</a></li>
+    <li><a href="#players">Firms</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#india">India VC</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-content">
+    <div class="hero-label">The Complete Industry Guide · 2025 Edition</div>
+    <h1>Understanding<br><em>Venture Capital</em><br>from first principles.</h1>
+    <p class="hero-sub">A comprehensive guide to the people, processes, and economics behind one of the world's most consequential industries — told plainly, for everyone.</p>
+  </div>
+  <div class="hero-stats-bar">
+    <div class="hero-stat">
+      <span class="hero-stat-value">$368B</span>
+      <span class="hero-stat-label">Global VC deployed in 2024</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">35,684</span>
+      <span class="hero-stat-label">Deals closed globally in 2024</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">57%</span>
+      <span class="hero-stat-label">US share of global VC</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">$1.25T</span>
+      <span class="hero-stat-label">Total industry AUM (2025)</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS VC -->
+<section id="what">
+  <div class="section-label">Chapter 01</div>
+  <h2 class="section-title">What is <em>Venture Capital</em>?</h2>
+  <div class="what-grid">
+    <div class="fade-in">
+      <p class="section-lead">Venture capital is a form of private financing where investors provide money to early-stage companies in exchange for equity — a stake in the business — in the hope of generating extraordinary returns.</p>
+      <div class="pull-quote">"Venture capital is the art of backing people, not just businesses — at the precise moment when both the risk and the opportunity are highest."</div>
+      <p style="font-size:14px;color:var(--gray-70);line-height:1.8;margin-bottom:16px;">Unlike a bank loan — which must be repaid with interest regardless of how the business performs — VC investment is a bet on the future. The investor receives no guaranteed return. If the company fails, the money is lost. If it succeeds spectacularly, the returns can be extraordinary: 10x, 50x, or even 100x the original investment.</p>
+      <p style="font-size:14px;color:var(--gray-70);line-height:1.8;">This is why venture capitalists look for companies with the potential to grow very large, very fast — often called "high growth potential." They are not interested in stable, predictable businesses. They are looking for the next Google, Airbnb, or Stripe.</p>
+    </div>
+    <div class="fade-in">
+      <p class="what-right" style="font-size:14px;color:var(--gray-70);line-height:1.8;margin-bottom:16px;">Venture capital occupies a specific niche in the broader world of finance. While stock market investors buy shares in publicly listed companies, and private equity firms acquire mature businesses, venture capitalists operate at the earliest, riskiest stage — before a company has proven itself.</p>
+      <p style="font-size:14px;color:var(--gray-70);line-height:1.8;margin-bottom:16px;">The VC model works on a portfolio basis. Because most early-stage startups fail, VCs expect many of their bets to go to zero. The entire model depends on a small number of outsized winners — the so-called "power law" — where one exceptional company generates returns large enough to cover the losses on everything else.</p>
+      <p style="font-size:14px;color:var(--gray-70);line-height:1.8;">In exchange for their capital, VCs typically receive preferred stock, a seat on the board, and significant influence over major strategic decisions.</p>
+      <div class="bcg-card">
+        <h4>The Power Law in Practice</h4>
+        <p>In a typical VC portfolio of 20 companies, roughly half will return nothing, a third will return modest amounts, and just 1–2 companies will generate the majority of the fund's total returns. Only 10x or more changes the math of the entire fund.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="section-label">Chapter 02</div>
+  <h2 class="section-title">The <em>Ecosystem</em></h2>
+  <p class="section-lead">Venture capital is not a single entity. It is a rich ecosystem of interconnected players, each with distinct roles, incentives, and relationships.</p>
+  <div class="eco-grid fade-in">
+    <div class="eco-card">
+      <div class="eco-num">01 / 08</div>
+      <h3>Limited Partners (LPs)</h3>
+      <p>The ultimate source of capital. LPs invest money into VC funds and wait for returns — typically university endowments, pension funds, sovereign wealth funds, and family offices. LPs are "silent" — they provide capital but have no say in which companies are backed.</p>
+      <span class="eco-tag">Capital Providers</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">02 / 08</div>
+      <h3>General Partners (GPs)</h3>
+      <p>The decision-makers. GPs raise the fund from LPs, source and evaluate opportunities, negotiate terms, sit on boards, and actively help portfolio companies grow. They earn a 2% management fee plus 20% carried interest on profits.</p>
+      <span class="eco-tag">Fund Managers</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">03 / 08</div>
+      <h3>Founders & Startups</h3>
+      <p>The companies being funded. Founders exchange equity for VC investment, agreeing to share control and future profits in exchange for capital, expertise, and network that VCs provide. The founder-investor relationship can be transformative — or catastrophic.</p>
+      <span class="eco-tag">Entrepreneurs</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">04 / 08</div>
+      <h3>Angel Investors</h3>
+      <p>Wealthy individuals investing their own money directly into very early-stage startups. Angels typically invest smaller amounts ($25K–$500K), move faster, and can be the critical first believers. Many successful founders become angels themselves.</p>
+      <span class="eco-tag">Early Capital</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">05 / 08</div>
+      <h3>Accelerators & Incubators</h3>
+      <p>Structured programs investing small amounts into cohorts of early-stage startups in exchange for equity (typically 5–7%). Y Combinator has backed Airbnb, Dropbox, Stripe, Coinbase, and Reddit. Graduating from a top accelerator is often the fastest path to serious VC attention.</p>
+      <span class="eco-tag">Launch Programs</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">06 / 08</div>
+      <h3>Corporate VCs (CVCs)</h3>
+      <p>Large companies operating their own venture arms — GV, Intel Capital, Salesforce Ventures, Amazon's Alexa Fund. CVCs invest strategically, seeking financial returns plus competitive intelligence. In 2024, CVCs participated in 46% of all global VC deal value.</p>
+      <span class="eco-tag">Strategic Investors</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">07 / 08</div>
+      <h3>Investment Banks & Advisors</h3>
+      <p>Financial intermediaries facilitating late-stage transactions, IPOs, and M&A exits. Goldman Sachs, Morgan Stanley, and boutique advisors play a critical role in helping VC-backed companies go public or find strategic buyers.</p>
+      <span class="eco-tag">Exit Facilitators</span>
+    </div>
+    <div class="eco-card">
+      <div class="eco-num">08 / 08</div>
+      <h3>Lawyers & Law Firms</h3>
+      <p>Deal counsel is essential at every stage. Specialised firms like Cooley, Gunderson, and Wilson Sonsini draft term sheets, investment agreements, and IP assignments. A good startup lawyer helps founders understand exactly what they're agreeing to.</p>
+      <span class="eco-tag">Legal Counsel</span>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDING STAGES -->
+<section id="stages">
+  <div class="section-label">Chapter 03</div>
+  <h2 class="section-title">Funding <em>Stages</em></h2>
+  <p class="section-lead">Startups raise capital in stages, each corresponding to a specific phase of company development. Each round is larger than the last — and each comes with more scrutiny.</p>
+  <div class="stages-list fade-in">
+    <div class="stage-row">
+      <div>
+        <div class="stage-label">Pre-Seed</div>
+        <div class="stage-sub">Idea Stage</div>
+      </div>
+      <div class="stage-body">
+        <h4>The Very Beginning</h4>
+        <p>The company may be little more than an idea, a prototype, or a founding team with a compelling hypothesis. No product, no customers, no revenue. Capital comes from founders, friends and family, or very early angels. Money is used to build the first version of a product and validate whether the core idea has merit.</p>
+      </div>
+      <div class="stage-meta">
+        <span class="stage-range">$50K – $1M</span>
+        <span class="stage-equity">Equity given: 5–15%</span>
+        <div class="stage-examples">
+          <span class="ex-tag">Friends & Family</span>
+          <span class="ex-tag">Founders</span>
+          <span class="ex-tag">Angels</span>
+        </div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div>
+        <div class="stage-label">Seed</div>
+        <div class="stage-sub">Validation Stage</div>
+      </div>
+      <div class="stage-body">
+        <h4>Proving the Concept</h4>
+        <p>The seed round funds initial product development and early go-to-market efforts. The team typically has a working MVP and perhaps early paying customers or strong user growth. SAFEs and convertible notes are commonly used to avoid setting a formal valuation early.</p>
+      </div>
+      <div class="stage-meta">
+        <span class="stage-range">$500K – $4M</span>
+        <span class="stage-equity">Equity given: 10–25%</span>
+        <div class="stage-examples">
+          <span class="ex-tag">Seed Funds</span>
+          <span class="ex-tag">Angels</span>
+          <span class="ex-tag">YC / Techstars</span>
+        </div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div>
+        <div class="stage-label">Series A</div>
+        <div class="stage-sub">Product-Market Fit</div>
+      </div>
+      <div class="stage-body">
+        <h4>Scaling What Works</h4>
+        <p>The first major institutional VC round. The company must demonstrate meaningful traction — recurring revenue (typically $1M–$5M ARR for SaaS), strong retention, and a credible path to scaling. Investors are buying into a business model, not just a vision. Board seats are assigned and the cap table is formalised.</p>
+      </div>
+      <div class="stage-meta">
+        <span class="stage-range">$2M – $20M</span>
+        <span class="stage-equity">Equity given: 15–30%</span>
+        <div class="stage-examples">
+          <span class="ex-tag">VC Firms</span>
+          <span class="ex-tag">Seed-to-A Funds</span>
+        </div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div>
+        <div class="stage-label">Series B</div>
+        <div class="stage-sub">Growth Stage</div>
+      </div>
+      <div class="stage-body">
+        <h4>Scaling the Machine</h4>
+        <p>Capital deployed to scale an already-proven model aggressively — expanding sales teams, entering new markets, building out operations. Revenue is typically in the tens of millions. Competition among investors for the best Series B deals is intense.</p>
+      </div>
+      <div class="stage-meta">
+        <span class="stage-range">$15M – $60M</span>
+        <span class="stage-equity">Equity given: 10–20%</span>
+        <div class="stage-examples">
+          <span class="ex-tag">Growth VCs</span>
+          <span class="ex-tag">Multi-stage Funds</span>
+        </div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div>
+        <div class="stage-label">Series C+</div>
+        <div class="stage-sub">Late Stage / Pre-IPO</div>
+      </div>
+      <div class="stage-body">
+        <h4>The Run to Exit</h4>
+        <p>Late-stage rounds fund the final phases of private growth before an exit. Companies often have hundreds of millions in revenue and valuations in the billions. The investor base broadens to sovereign wealth funds, hedge funds, and private equity firms. The exit — IPO or acquisition — is visible on the horizon.</p>
+      </div>
+      <div class="stage-meta">
+        <span class="stage-range">$50M – $1B+</span>
+        <span class="stage-equity">Equity given: 5–15%</span>
+        <div class="stage-examples">
+          <span class="ex-tag">Crossover Funds</span>
+          <span class="ex-tag">SWFs</span>
+          <span class="ex-tag">PE Firms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEAL PROCESS -->
+<section id="process">
+  <div class="section-label">Chapter 04</div>
+  <h2 class="section-title">The <em>Deal Process</em></h2>
+  <p class="section-lead">From the first cold email to the wire transfer, a VC deal moves through a structured sequence of stages. Understanding each step demystifies a process that can otherwise feel opaque and intimidating.</p>
+  <div class="process-steps fade-in">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <div class="step-title">Deal Sourcing</div>
+        <div class="step-duration">Ongoing · No fixed timeline</div>
+        <p>The process begins long before any pitch is given. VCs spend enormous energy building the pipelines that bring deals to them. The best deals rarely come from cold inbounds — they come from warm referrals, trusted networks, and proactive outreach. VC analysts monitor accelerator cohorts, research academic papers, attend conferences, and track fast-growing companies through PitchBook, Crunchbase, and LinkedIn signals.</p>
+        <p>A warm introduction from a trusted portfolio founder carries 10x the weight of a cold email, however polished.</p>
+        <div class="step-pills">
+          <span class="pill">Referral Networks</span>
+          <span class="pill">Demo Days</span>
+          <span class="pill">Cold Inbounds</span>
+          <span class="pill">Proprietary Research</span>
+          <span class="pill">Conference Sourcing</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <div class="step-title">Initial Screening & Intro Call</div>
+        <div class="step-duration">Days 1–7 · 30–60 minute call</div>
+        <p>The first formal touchpoint is usually a brief introductory call. The VC makes a rapid assessment: Is this team exceptional? Is the market large enough? Is the product differentiated? Is there traction? Most deals are rejected at this stage. Your pitch deck should tell a compelling story — problem, solution, traction, market, team, and ask — in no more than 12–15 slides.</p>
+        <div class="step-pills">
+          <span class="pill">Deck Review</span>
+          <span class="pill">Team Assessment</span>
+          <span class="pill">Market Sizing</span>
+          <span class="pill">Traction Check</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <div class="step-title">Partner Meeting & Deep Dive</div>
+        <div class="step-duration">Weeks 1–3 · Multiple sessions</div>
+        <p>If the intro call goes well, you'll meet the full partnership. This is a much deeper conversation: 60–90 minutes or more across multiple sessions. Expect probing questions on unit economics, competitive moat, go-to-market strategy, and how you'll deploy capital. VCs test whether the founding team truly understands their own business — with clear-eyed awareness of the risks.</p>
+        <div class="step-pills">
+          <span class="pill">Full Partnership Pitch</span>
+          <span class="pill">Unit Economics Deep Dive</span>
+          <span class="pill">Technical Assessment</span>
+          <span class="pill">Customer Discovery</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <div class="step-title">Due Diligence</div>
+        <div class="step-duration">Weeks 2–6 · Most intensive phase</div>
+        <p>The VC firm sends a diligence request list covering four key areas: <strong>Financial</strong> — revenue model, growth rates, burn rate, projections. <strong>Legal</strong> — corporate structure, IP, employment contracts, existing agreements. <strong>Technical</strong> — technology stack, codebase quality, scalability. <strong>Commercial</strong> — customer, competitor, and industry expert reference calls to independently verify your claims.</p>
+        <div class="step-pills">
+          <span class="pill">Financial Audit</span>
+          <span class="pill">Legal Review</span>
+          <span class="pill">Technical Assessment</span>
+          <span class="pill">Customer References</span>
+          <span class="pill">Competitive Analysis</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">05</div>
+      <div class="step-content">
+        <div class="step-title">Investment Committee Approval</div>
+        <div class="step-duration">Week 4–5 · Internal review</div>
+        <p>An investment requires approval from the full partnership via an Investment Committee meeting. The champion partner presents the thesis, diligence findings, proposed valuation, and recommendation. Other partners ask hard questions and vote. This is where deals die silently — and why it's important to build relationships with multiple people at the firm, not just your single point of contact.</p>
+        <div class="step-pills">
+          <span class="pill">Partner Presentation</span>
+          <span class="pill">Risk Assessment</span>
+          <span class="pill">Portfolio Fit</span>
+          <span class="pill">Consensus Vote</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">06</div>
+      <div class="step-content">
+        <div class="step-title">Term Sheet Negotiation</div>
+        <div class="step-duration">Week 5–7 · High-stakes negotiation</div>
+        <p>If the IC approves, the VC issues a term sheet — a non-binding document outlining proposed deal terms: pre-money valuation, investment amount, security type, liquidation preferences, anti-dilution provisions, pro-rata rights, board composition, and protective provisions. While valuation gets all the attention, protective provisions and liquidation preferences can matter far more at exit.</p>
+        <div class="step-pills">
+          <span class="pill">Pre-Money Valuation</span>
+          <span class="pill">Liquidation Prefs</span>
+          <span class="pill">Board Composition</span>
+          <span class="pill">Pro-Rata Rights</span>
+          <span class="pill">Anti-Dilution</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">07</div>
+      <div class="step-content">
+        <div class="step-title">Legal Documentation & Closing</div>
+        <div class="step-duration">Weeks 6–10 · Legal execution</div>
+        <p>Both sides' lawyers draft the full legal agreements: the <strong>Stock Purchase Agreement (SPA)</strong>, the <strong>Investor Rights Agreement (IRA)</strong>, the <strong>Voting Agreement</strong>, and the <strong>Right of First Refusal Agreement (ROFR)</strong>. Once all documents are signed by all parties, the VC wires the funds. The deal is officially closed.</p>
+        <div class="step-pills">
+          <span class="pill">Stock Purchase Agreement</span>
+          <span class="pill">Investor Rights Agreement</span>
+          <span class="pill">Voting Agreement</span>
+          <span class="pill">ROFR / Co-Sale</span>
+          <span class="pill">Cap Table Update</span>
+        </div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">08</div>
+      <div class="step-content">
+        <div class="step-title">Post-Investment Value-Add</div>
+        <div class="step-duration">Years 1–7 · Ongoing relationship</div>
+        <p>Closing the deal is the beginning of a long-term relationship. Good VCs work actively to help portfolio companies succeed: board oversight, network introductions, recruiting assistance, and operational expertise. The relationship culminates in an <strong>exit</strong> — an IPO or acquisition — that returns capital to LPs. The average VC fund holds investments for 7–10 years before most companies reach exit stage.</p>
+        <div class="step-pills">
+          <span class="pill">Board Governance</span>
+          <span class="pill">Network Introductions</span>
+          <span class="pill">Hiring Support</span>
+          <span class="pill">Follow-on Rounds</span>
+          <span class="pill">Exit Strategy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY PLAYERS -->
+<section id="players">
+  <div class="section-label">Chapter 05</div>
+  <h2 class="section-title">Landmark <em>Firms</em></h2>
+  <p class="section-lead">A handful of VC firms have shaped the modern technology economy. Their investments didn't just build companies — they built industries.</p>
+  <div class="players-grid fade-in">
+    <div class="player-card">
+      <div class="player-founded">Founded 1972 · Menlo Park, CA</div>
+      <h3>Sequoia Capital</h3>
+      <p>The most storied name in venture capital. Sequoia's portfolio reads like a history of the technology industry — Apple, Google, Oracle, Cisco, Instagram, WhatsApp, Stripe, and Zoom. With $55.7B AUM, their "Company Design" philosophy has become the gold standard for building durable businesses.</p>
+      <div class="player-investments">
+        <span class="inv-tag">Apple</span><span class="inv-tag">Google</span><span class="inv-tag">Stripe</span><span class="inv-tag">WhatsApp</span><span class="inv-tag">Zoom</span><span class="inv-tag">Airbnb</span>
+      </div>
+    </div>
+    <div class="player-card">
+      <div class="player-founded">Founded 2009 · Menlo Park, CA</div>
+      <h3>Andreessen Horowitz</h3>
+      <p>Known as a16z, this firm redefined what a VC firm could be — building a "platform" of operators, marketers, recruiters, and policy experts to support founders. Managing over $90B across AI, biotech, fintech, consumer, and crypto funds.</p>
+      <div class="player-investments">
+        <span class="inv-tag">OpenAI</span><span class="inv-tag">Airbnb</span><span class="inv-tag">Lyft</span><span class="inv-tag">Coinbase</span><span class="inv-tag">Stripe</span><span class="inv-tag">GitHub</span>
+      </div>
+    </div>
+    <div class="player-card">
+      <div class="player-founded">Founded 1994 · Palo Alto, CA</div>
+      <h3>Benchmark Capital</h3>
+      <p>Famous for its egalitarian partnership structure — all partners share equally in profits and credit. Benchmark's deliberate, focused portfolio has produced extraordinary returns with early bets on Uber, eBay, Twitter, Instagram, and Snapchat.</p>
+      <div class="player-investments">
+        <span class="inv-tag">Uber</span><span class="inv-tag">eBay</span><span class="inv-tag">Twitter</span><span class="inv-tag">Instagram</span><span class="inv-tag">Snapchat</span>
+      </div>
+    </div>
+    <div class="player-card">
+      <div class="player-founded">Founded 1983 · Chevy Chase, MD</div>
+      <h3>New Enterprise Associates</h3>
+      <p>One of the world's largest VC firms with $25B AUM. NEA invests across technology and healthcare from seed to growth stage, with over 225 portfolio IPOs and 425 acquisitions. Their healthcare expertise sets them apart.</p>
+      <div class="player-investments">
+        <span class="inv-tag">Robinhood</span><span class="inv-tag">Plaid</span><span class="inv-tag">Groupon</span><span class="inv-tag">Workday</span><span class="inv-tag">Salesforce</span>
+      </div>
+    </div>
+    <div class="player-card">
+      <div class="player-founded">Founded 1984 · San Francisco, CA</div>
+      <h3>Founders Fund</h3>
+      <p>Founded by Peter Thiel with the explicit mission to back companies that change the world. Known for contrarian bets: SpaceX, Palantir, and Anduril were all deeply unfashionable when made. Their thesis: the biggest opportunities lie where other VCs won't go.</p>
+      <div class="player-investments">
+        <span class="inv-tag">SpaceX</span><span class="inv-tag">Palantir</span><span class="inv-tag">Facebook</span><span class="inv-tag">Anduril</span><span class="inv-tag">Affirm</span>
+      </div>
+    </div>
+    <div class="player-card">
+      <div class="player-founded">Founded 1996 · Palo Alto, CA</div>
+      <h3>Accel</h3>
+      <p>A rare truly global VC firm with strong presences in the US, Europe, and India. Their early $12.7M Series A investment in Facebook returned over $9 billion. Their European and Indian funds have identified regional champions long before larger US firms arrived.</p>
+      <div class="player-investments">
+        <span class="inv-tag">Facebook</span><span class="inv-tag">Slack</span><span class="inv-tag">Dropbox</span><span class="inv-tag">Atlassian</span><span class="inv-tag">Flipkart</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET DATA -->
+<section id="market">
+  <div class="section-label">Chapter 06</div>
+  <h2 class="section-title">The <em>Market</em> Today</h2>
+  <p class="section-lead">Venture capital has evolved from a niche Silicon Valley phenomenon into a global financial force — and the pace of change is accelerating, driven primarily by artificial intelligence.</p>
+  <div class="market-grid fade-in">
+    <div class="market-stat">
+      <span class="market-stat-value">$368B</span>
+      <div class="market-stat-label">Total global VC investment in 2024, up from $349B in 2023</div>
+      <div class="market-stat-detail">Source: KPMG Venture Pulse Q4 2024</div>
+    </div>
+    <div class="market-stat">
+      <span class="market-stat-value">$307B</span>
+      <div class="market-stat-label">Dry powder (uninvested capital) in US VC funds alone</div>
+      <div class="market-stat-detail">Source: NVCA 2025 Yearbook</div>
+    </div>
+    <div class="market-stat">
+      <span class="market-stat-value">26%</span>
+      <div class="market-stat-label">Share of global VC funding captured by AI companies in 2025</div>
+      <div class="market-stat-detail">Source: Bain & Company 2025 Trends</div>
+    </div>
+    <div class="market-stat">
+      <span class="market-stat-value">$215B</span>
+      <div class="market-stat-label">US VC deal value across 14,320 deals in 2024</div>
+      <div class="market-stat-detail">Source: NVCA / PitchBook 2025</div>
+    </div>
+    <div class="market-stat">
+      <span class="market-stat-value">$1.25T</span>
+      <div class="market-stat-label">Total global VC industry AUM in 2025 — a tenfold increase over 15 years</div>
+      <div class="market-stat-detail">Source: DealRoom 2025 Analysis</div>
+    </div>
+    <div class="market-stat">
+      <span class="market-stat-value">68%</span>
+      <div class="market-stat-label">Of all AI deal value in 2025 involved at least one corporate VC backer</div>
+      <div class="market-stat-detail">Source: Bain & Company 2025 Trends</div>
+    </div>
+  </div>
+  <div class="market-insights fade-in">
+    <div class="insight-box">
+      <h4>Regional Breakdown (2024)</h4>
+      <ul>
+        <li>United States <span>$209B · 57% share</span></li>
+        <li>Asia-Pacific <span>$78.8B · 21% share</span></li>
+        <li>Europe <span>$62.4B · 17% share</span></li>
+        <li>Rest of World <span>$17.5B · 5% share</span></li>
+        <li>China <span>Gaining in AI & EVs</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <h4>Hottest Sectors (2025)</h4>
+      <ul>
+        <li>Artificial Intelligence & ML <span>26%+ of all VC</span></li>
+        <li>Healthcare & Biotech <span>Second largest</span></li>
+        <li>Cybersecurity <span>Rapidly growing</span></li>
+        <li>Defence Technology <span>Surging post-2022</span></li>
+        <li>Climate & Clean Energy <span>Long-term structural bet</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <h4>Fund Performance Benchmarks</h4>
+      <ul>
+        <li>Top quartile VC fund net IRR <span>25–35%+</span></li>
+        <li>Median VC fund net IRR <span>~12–15%</span></li>
+        <li>Average fund hold period <span>7–10 years</span></li>
+        <li>Typical management fee <span>2% per annum</span></li>
+        <li>Standard carried interest <span>20% of profits</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <h4>Key Trends Shaping the Industry</h4>
+      <p>AI is reshaping both what VCs invest in and how they invest. Emerging tools for deal sourcing, diligence automation, and portfolio monitoring are compressing decision timelines. The IPO drought of 2022–2024 created a backlog of late-stage companies eager to exit — the market expects a wave of liquidity in 2025–2026 as macro conditions stabilise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     INDIA VC SECTION — NEW ADDITION
+     ════════════════════════════════════════════════════════ -->
+<section id="india">
+  <div class="india-hero">
+    <div class="india-intro">
+      <div class="section-label" style="color:var(--india-saffron);">
+        <span style="display:block;width:24px;height:2px;background:var(--india-saffron);"></span>
+        Chapter 07 · Special Focus
+      </div>
+      <h2 class="section-title" style="color:var(--white);">India's <em style="color:var(--india-saffron)">Venture Capital</em><br>Landscape</h2>
+      <p>India has emerged as the world's third-largest startup ecosystem — a remarkable ascent driven by 900M+ internet users, a young demographic dividend, rapidly deepening digital infrastructure, and a generation of battle-tested founders returning from Silicon Valley with capital, networks, and ambition.</p>
+      <p>From UPI's real-time payment rails to ONDC's open commerce network, India's government-built digital public infrastructure has created unique conditions for high-velocity startup growth that are without parallel globally. The ecosystem has matured from consumer-internet clones to world-class SaaS, deep-tech, and climate businesses competing on global terms.</p>
+    </div>
+    <div class="india-stats-col">
+      <div class="india-stat-cell">
+        <span class="india-stat-val">$14.2B</span>
+        <span class="india-stat-lbl">Total VC deployed in India (2024)</span>
+      </div>
+      <div class="india-stat-cell">
+        <span class="india-stat-val">118</span>
+        <span class="india-stat-lbl">Unicorns as of Q1 2025</span>
+      </div>
+      <div class="india-stat-cell">
+        <span class="india-stat-val">3rd</span>
+        <span class="india-stat-lbl">Largest startup ecosystem globally</span>
+      </div>
+      <div class="india-stat-cell">
+        <span class="india-stat-val">1,400+</span>
+        <span class="india-stat-lbl">Active VC & PE investors in India</span>
+      </div>
+      <div class="india-stat-cell">
+        <span class="india-stat-val">$500B+</span>
+        <span class="india-stat-lbl">Combined valuation of top 10 unicorns</span>
+      </div>
+      <div class="india-stat-cell">
+        <span class="india-stat-val">112M</span>
+        <span class="india-stat-lbl">UPI transactions/day (2025) — startup fuel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="india-tabs">
+    <button class="india-tab active" onclick="switchTab('firms', this)">Major VC Firms</button>
+    <button class="india-tab" onclick="switchTab('unicorns', this)">Notable Unicorns</button>
+    <button class="india-tab" onclick="switchTab('sectors', this)">Sectors & Trends</button>
+    <button class="india-tab" onclick="switchTab('hubs', this)">Startup Hubs</button>
+  </div>
+
+  <!-- Panel: Firms -->
+  <div class="india-panel active" id="panel-firms">
+    <div class="india-firms-grid fade-in">
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2000 · Bengaluru</div>
+        <h3>Peak XV Partners</h3>
+        <p>Formerly Sequoia India & Southeast Asia, rebranded in 2023. The most established and feared name in Indian VC with $9B+ AUM deployed across India. Their portfolio spans Zomato, OYO, BYJU's, Razorpay, Meesho, and Unacademy. Peak XV's brand alone can validate a startup's trajectory in the Indian market.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Seed–Growth</span>
+          <span class="india-firm-tag">Consumer</span>
+          <span class="india-firm-tag">SaaS</span>
+          <span class="india-firm-tag">Fintech</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2000 · Bengaluru</div>
+        <h3>Accel India</h3>
+        <p>Part of the global Accel network, the India fund has backed Flipkart, Freshworks, Swiggy, BookMyShow, BrowserStack, and Urban Company. Accel India is known for rigorous operational support and a genuine early-stage focus — frequently writing India's first institutional cheques into companies that go on to define categories.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Seed–Series B</span>
+          <span class="india-firm-tag">Consumer</span>
+          <span class="india-firm-tag">B2B SaaS</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2010 · Bengaluru / Mumbai</div>
+        <h3>Blume Ventures</h3>
+        <p>India's most prominent homegrown early-stage fund. Blume backs Indian founders at the pre-seed and seed stage with conviction, often writing the very first cheque. Portfolio includes Unacademy, Dunzo, Slice, GreyOrange, and Locus. Known for founder-first culture and long holding periods. AUM: ~$750M across five funds.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Pre-Seed / Seed</span>
+          <span class="india-firm-tag">Deep Tech</span>
+          <span class="india-firm-tag">SaaS</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2006 · Mumbai / San Francisco</div>
+        <h3>Nexus Venture Partners</h3>
+        <p>A cross-border fund deeply embedded in both India and the US, backing Indian founders building global companies. Portfolio includes Snapdeal, Delhivery, Uniphore, Druva, and Postman. Nexus is especially strong in enterprise SaaS — their thesis that Indian engineers can build globally-competitive software products has been repeatedly validated.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Series A–B</span>
+          <span class="india-firm-tag">Enterprise SaaS</span>
+          <span class="india-firm-tag">Cross-border</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2006 · Bengaluru</div>
+        <h3>Elevation Capital</h3>
+        <p>Formerly SAIF Partners, rebranded in 2020. One of India's most active early-stage investors with $1.7B+ in committed capital. Portfolio includes Meesho, Unacademy, Sharechat, Urban Company, and HealthKart. Elevation is particularly strong in consumer internet and fintech plays targeting India's mass-market internet user base.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Early Stage</span>
+          <span class="india-firm-tag">Consumer Internet</span>
+          <span class="india-firm-tag">Fintech</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2011 · Bengaluru</div>
+        <h3>Kalaari Capital</h3>
+        <p>Founded by Vani Kola, one of India's most prominent women investors. Kalaari focuses on early-stage consumer tech, SaaS, and health with $650M+ AUM. Known investments include Myntra, Dream11, and Curefit. Kalaari's sector expertise in consumer and healthtech has generated several marquee outcomes.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Seed–Series A</span>
+          <span class="india-firm-tag">Consumer</span>
+          <span class="india-firm-tag">Healthtech</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2000 · Bengaluru / New York</div>
+        <h3>Z47 (Matrix India)</h3>
+        <p>Formerly Matrix Partners India, rebranded as Z47 in 2023 as an India-focused independent fund. Backed Ola, Dailyhunt, Razorpay (early), and CARS24. Known for conviction-driven thesis investing and a willingness to back founders tackling hard, infrastructure-level problems in India rather than surface-level consumer apps.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Series A–C</span>
+          <span class="india-firm-tag">Mobility</span>
+          <span class="india-firm-tag">Fintech</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2007 · Bengaluru</div>
+        <h3>Lightspeed India</h3>
+        <p>Part of the global Lightspeed network. The India fund has backed Oyo Rooms, ShareChat, Udaan, and Yellow Messenger (now Yellow.ai). Lightspeed's global platform gives portfolio companies immediate access to Silicon Valley expertise and cross-border GTM. They invest from seed to growth stage with notable strength in B2B marketplaces and enterprise software.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Seed–Growth</span>
+          <span class="india-firm-tag">B2B Marketplaces</span>
+          <span class="india-firm-tag">Enterprise</span>
+        </div>
+      </div>
+      <div class="india-firm-card">
+        <div class="india-firm-hq">Est. 2012 · Mumbai</div>
+        <h3>Chiratae Ventures</h3>
+        <p>Formerly IDG Ventures India, Chiratae invests in early-stage technology companies with $700M+ AUM. Portfolio includes Flipkart (early), Myntra, Cure.fit, FirstCry, and Happay. Chiratae's strength lies in identifying consumer internet opportunities tied to India's unique demographic and infrastructure moments.</p>
+        <div class="india-firm-tags">
+          <span class="india-firm-tag">Early Stage</span>
+          <span class="india-firm-tag">Consumer Tech</span>
+          <span class="india-firm-tag">Edtech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: Unicorns -->
+  <div class="india-panel" id="panel-unicorns">
+    <div class="unicorn-grid fade-in">
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Quick Commerce</div>
+        <div class="unicorn-name">Zepto</div>
+        <div class="unicorn-val">$5B+</div>
+        <div class="unicorn-backers">Nexus, Y Combinator, StepStone</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Fintech / Payments</div>
+        <div class="unicorn-name">PhonePe</div>
+        <div class="unicorn-val">$12B</div>
+        <div class="unicorn-backers">Walmart, General Atlantic, Tiger Global</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Fintech / Rewards</div>
+        <div class="unicorn-name">CRED</div>
+        <div class="unicorn-val">$6.4B</div>
+        <div class="unicorn-backers">Tiger Global, Falcon Edge, Peak XV</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Fintech / Payments</div>
+        <div class="unicorn-name">Razorpay</div>
+        <div class="unicorn-val">$7.5B</div>
+        <div class="unicorn-backers">Peak XV, Tiger Global, Y Combinator</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Social Commerce</div>
+        <div class="unicorn-name">Meesho</div>
+        <div class="unicorn-val">$5B</div>
+        <div class="unicorn-backers">Peak XV, Elevation Capital, Meta</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">B2B Commerce</div>
+        <div class="unicorn-name">Udaan</div>
+        <div class="unicorn-val">$3.1B</div>
+        <div class="unicorn-backers">Lightspeed, DST Global, GGV Capital</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Logistics</div>
+        <div class="unicorn-name">Delhivery</div>
+        <div class="unicorn-val">$2.8B (Public)</div>
+        <div class="unicorn-backers">Nexus, SoftBank, Tiger Global</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">D2C / FMCG</div>
+        <div class="unicorn-name">Mamaearth</div>
+        <div class="unicorn-val">$1.2B (Public)</div>
+        <div class="unicorn-backers">Peak XV, Fireside Ventures, Stellaris</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Fantasy Sports</div>
+        <div class="unicorn-name">Dream11</div>
+        <div class="unicorn-val">$8B</div>
+        <div class="unicorn-backers">Kalaari, Tiger Global, Footpath Ventures</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Mobility / EV</div>
+        <div class="unicorn-name">Ola Electric</div>
+        <div class="unicorn-val">$4.5B (Public)</div>
+        <div class="unicorn-backers">SoftBank, Tiger Global, Matrix</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Insurance Tech</div>
+        <div class="unicorn-name">Digit Insurance</div>
+        <div class="unicorn-val">$4B (Public)</div>
+        <div class="unicorn-backers">Fairfax Financial, A91 Partners, TVS Capital</div>
+      </div>
+      <div class="unicorn-card">
+        <div class="unicorn-sector">Enterprise SaaS</div>
+        <div class="unicorn-name">Postman</div>
+        <div class="unicorn-val">$5.6B</div>
+        <div class="unicorn-backers">Nexus, Insight Partners, CRV</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: Sectors -->
+  <div class="india-panel" id="panel-sectors">
+    <div class="india-sectors-grid fade-in">
+      <div class="india-sector-card">
+        <div class="india-sector-name">Fintech & Payments</div>
+        <div class="india-sector-share">~22%</div>
+        <div class="india-sector-desc">India's largest VC category by deal count. Driven by UPI's explosive adoption (14B+ monthly transactions), BNPL, wealth management, and insurance tech. Regulatory clarity from RBI and SEBI has matured the ecosystem. Global benchmarks: Razorpay, PhonePe, CRED, Slice, Jupiter.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">SaaS & Enterprise</div>
+        <div class="india-sector-share">~18%</div>
+        <div class="india-sector-desc">India produces globally competitive B2B SaaS at 40–60% lower cost than the US. Freshworks IPO (2021) validated the model. The next wave includes AI-native vertical SaaS, data infrastructure, and dev-tools built by Indian engineers for global customers. Postman, Chargebee, and Leadsquared are canonical examples.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Healthtech & Biotech</div>
+        <div class="india-sector-share">~14%</div>
+        <div class="india-sector-desc">India's healthcare deficit ($80B investment gap) makes it one of the largest opportunity categories. Digital health platforms (Practo, PharmEasy), diagnostics (Healthians, Redcliffe), and hospital management SaaS attract growing capital. GenAI is accelerating drug discovery and clinical workflow automation.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Edtech</div>
+        <div class="india-sector-share">~8%</div>
+        <div class="india-sector-desc">Post-BYJU's correction, India's edtech sector is rebuilding on sustainable unit economics — test prep, upskilling, and vernacular content. The K-12 TAM remains enormous. Second-wave players like Physics Wallah (IPO bound) and Vedantu have found durable product-market fit in value-focused segments of the market.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Consumer & D2C</div>
+        <div class="india-sector-share">~12%</div>
+        <div class="india-sector-desc">India's consumption story — 400M middle-class consumers, Tier 2/3 internet adoption, and UPI-powered checkout — drives strong D2C investment. Categories include beauty (Mamaearth, Minimalist), food (Licious, ID Fresh), and fashion. Quick commerce (Zepto, Blinkit) has emerged as the fastest-growing sub-category.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Deep Tech & AI</div>
+        <div class="india-sector-share">~11%</div>
+        <div class="india-sector-desc">India's AI moment is accelerating. With the world's largest pool of ML engineers and strong government AI initiatives (IndiaAI Mission), the country is positioned for foundational model development, AI-enabled services exports, and domestic AI infrastructure. Early winners in AI include Sarvam AI, Krutrim, and Yellow.ai.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Climate & Clean Energy</div>
+        <div class="india-sector-share">~6%</div>
+        <div class="india-sector-desc">India's net-zero commitment by 2070 and aggressive renewable targets (500GW by 2030) are creating a massive cleantech opportunity. EV (Ola Electric, Ather), solar financing (SolarSquare, Oorjan), and agri-tech (Clover, DeHaat) attract growing capital from domestic and global climate funds.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Agritech & Rural</div>
+        <div class="india-sector-share">~5%</div>
+        <div class="india-sector-desc">India's 600M+ farmers represent the largest underserved market in the world. Agritech startups are attacking yield optimization (Cropin), agricultural lending (Jai Kisan, Samunnati), and supply-chain efficiency. Government initiatives like PM-KISAN and eNAM are catalysing the sector's digital transformation.</div>
+      </div>
+      <div class="india-sector-card">
+        <div class="india-sector-name">Gaming & Creator Economy</div>
+        <div class="india-sector-share">~4%</div>
+        <div class="india-sector-desc">India is the world's largest mobile gaming market by download volume. Fantasy sports (Dream11, MPL), casual gaming, and the creator economy (Josh, Koo, ShareChat) are attracting significant capital. A nascent esports infrastructure is building, with an expected IPL-like monetisation playbook emerging.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: Hubs -->
+  <div class="india-panel" id="panel-hubs">
+    <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.8;max-width:680px;margin-bottom:0;">India's startup activity is concentrated in a handful of metropolitan clusters — each with a distinct character, sectoral specialisation, and investor ecosystem. Understanding these hubs is essential context for navigating the Indian VC market.</div>
+    <div class="india-hubs-grid fade-in">
+      <div class="india-hub-card">
+        <div class="india-hub-city">Bengaluru</div>
+        <div class="india-hub-nickname">India's Silicon Valley</div>
+        <div class="india-hub-desc">Home to ~35% of all Indian startups and the vast majority of deep tech and SaaS companies. Bengaluru's engineering talent pool — fed by IISc, IITs, and major tech MNCs — is unparalleled. The city's "mafias" of ex-Infosys, Flipkart, and Freshworks employees are now founding and funding the next wave. NASSCOM HQ is based here.</div>
+        <div class="india-hub-firms">
+          <span class="india-hub-firm-tag">Peak XV</span>
+          <span class="india-hub-firm-tag">Accel India</span>
+          <span class="india-hub-firm-tag">Blume</span>
+          <span class="india-hub-firm-tag">Elevation</span>
+          <span class="india-hub-firm-tag">Kalaari</span>
+          <span class="india-hub-firm-tag">Lightspeed</span>
+        </div>
+      </div>
+      <div class="india-hub-card">
+        <div class="india-hub-city">Delhi NCR</div>
+        <div class="india-hub-nickname">The Policy & Commerce Hub</div>
+        <div class="india-hub-desc">Delhi, Gurugram, and Noida form India's second-largest startup cluster, with particular strength in consumer internet, edtech, and fintech. Proximity to government and regulatory bodies gives NCR-based startups an advantage in regulated sectors. NCR is home to Snapdeal, Zomato (Gurugram), PolicyBazaar, Paytm (Noida), and IndiaMart.</div>
+        <div class="india-hub-firms">
+          <span class="india-hub-firm-tag">Z47</span>
+          <span class="india-hub-firm-tag">Info Edge Ventures</span>
+          <span class="india-hub-firm-tag">Omidyar Network</span>
+          <span class="india-hub-firm-tag">India Quotient</span>
+        </div>
+      </div>
+      <div class="india-hub-card">
+        <div class="india-hub-city">Mumbai</div>
+        <div class="india-hub-nickname">The Financial Capital</div>
+        <div class="india-hub-desc">India's financial capital and home to SEBI, BSE, and NSE. Mumbai dominates fintech, insurtech, and wealth management startups, given proximity to India's largest banks and financial institutions. The city is also a hub for media, entertainment, and creator economy plays. Home to Razorpay (HQ), Navi Technologies, and Groww.</div>
+        <div class="india-hub-firms">
+          <span class="india-hub-firm-tag">Chiratae</span>
+          <span class="india-hub-firm-tag">Blume</span>
+          <span class="india-hub-firm-tag">A91 Partners</span>
+          <span class="india-hub-firm-tag">Fireside Ventures</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bcg-card bcg-card-dark" style="margin-top:36px;border-left-color:var(--india-saffron);">
+      <h4 style="color:rgba(255,153,51,0.65);">India VC: The Macro Tailwinds</h4>
+      <p>Three structural forces underpin India's long-term VC opportunity: (1) <strong>Digital Public Infrastructure</strong> — UPI, Aadhaar, ONDC, and Account Aggregator frameworks create plug-and-play regulatory rails that dramatically reduce time-to-market for fintech and commerce startups. (2) <strong>Talent Arbitrage</strong> — India's 1.5M engineering graduates annually and $300B IT services industry produce world-class builders at globally competitive compensation. (3) <strong>Domestic Market Scale</strong> — 900M+ internet users approaching $4T GDP, with the next 300M consumers digitising in the next decade, creates a domestic addressable market rivalled only by China and the US.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSSARY -->
+<section id="glossary">
+  <div class="section-label">Chapter 08</div>
+  <h2 class="section-title">The <em>Glossary</em></h2>
+  <p class="section-lead">Venture capital has its own dense language. Master these terms and you'll be able to navigate any VC conversation, term sheet, or investor update with confidence.</p>
+  <div style="margin-bottom:36px;">
+    <div class="glossary-categories">
+      <button class="cat-btn active" onclick="filterGlossary('all', this)">All Terms</button>
+      <button class="cat-btn" onclick="filterGlossary('structure', this)">Deal Structure</button>
+      <button class="cat-btn" onclick="filterGlossary('economics', this)">Economics</button>
+      <button class="cat-btn" onclick="filterGlossary('governance', this)">Governance</button>
+      <button class="cat-btn" onclick="filterGlossary('metrics', this)">Metrics</button>
+      <button class="cat-btn" onclick="filterGlossary('fund', this)">Fund Mechanics</button>
+      <button class="cat-btn" onclick="filterGlossary('exit', this)">Exits</button>
+    </div>
+  </div>
+  <div class="glossary-grid fade-in">
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">Pre-Money Valuation</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">The agreed value of a company before new investment is added. If a VC invests $5M at a $20M pre-money valuation, the company is worth $25M post-investment and the VC owns 20%.</div>
+    </div>
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">Term Sheet</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">A non-binding document (typically 5–15 pages) outlining the key terms of a proposed investment — valuation, amount, equity type, rights, and governance. Most term sheets include binding exclusivity and confidentiality clauses.</div>
+    </div>
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">SAFE</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">Simple Agreement for Future Equity. A one-page instrument invented by Y Combinator that gives investors the right to convert their investment into equity at the company's next priced round — usually at a discount or subject to a valuation cap.</div>
+    </div>
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">Convertible Note</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">A short-term loan that converts into equity at a future financing round. Unlike a SAFE, it accrues interest and has a maturity date. The investor typically receives a 15–25% discount or benefits from a valuation cap when converting.</div>
+    </div>
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">Priced Round</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">A financing round in which a formal valuation is set and new preferred shares are issued at a specific price per share. Priced rounds (typically Series A and beyond) involve full legal documentation and board changes.</div>
+    </div>
+    <div class="glossary-item" data-cat="structure">
+      <div class="glossary-term">Cap Table</div>
+      <span class="glossary-cat-tag">Deal Structure</span>
+      <div class="glossary-def">Capitalisation table — a spreadsheet detailing every shareholder's stake in the company, listing founders, employees (options and vested shares), angels, and institutional investors.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Liquidation Preference</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">A provision giving investors the right to receive their money back before founders and common shareholders receive anything in a sale or wind-down. A "1x non-participating" preference is the investor-friendly standard; "2x participating" is aggressive and founder-unfriendly.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Anti-Dilution</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">Protection for investors if the company later raises money at a lower valuation (a "down round"). Broad-based weighted average anti-dilution adjusts the conversion price proportionally. "Full ratchet" anti-dilution dramatically dilutes founders.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Dilution</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">The reduction in an existing shareholder's percentage ownership when new shares are issued. Every funding round dilutes earlier shareholders — founders, employees, and prior investors all own a smaller slice of a (hopefully) larger pie.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Option Pool</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">A reserved block of equity (typically 10–20%) set aside to grant stock options to future employees. The option pool is usually carved out before the pre-money valuation is set, meaning it dilutes the founders — not the new investors. This "option pool shuffle" is a key negotiating point founders often miss.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Pro-Rata Rights</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">The contractual right for an investor to participate in future funding rounds to maintain their percentage ownership. Highly coveted — especially for early investors in breakout companies — as they allow continued exposure to the upside.</div>
+    </div>
+    <div class="glossary-item" data-cat="economics">
+      <div class="glossary-term">Down Round</div>
+      <span class="glossary-cat-tag">Economics</span>
+      <div class="glossary-def">A funding round where a company raises capital at a lower valuation than its previous round. Down rounds signal deterioration in the company's prospects and typically trigger anti-dilution adjustments and significant dilution for founders.</div>
+    </div>
+    <div class="glossary-item" data-cat="governance">
+      <div class="glossary-term">Board of Directors</div>
+      <span class="glossary-cat-tag">Governance</span>
+      <div class="glossary-def">The governing body of a corporation, responsible for major strategic decisions, CEO oversight, and fiduciary duty to shareholders. In VC-backed companies, the board typically consists of founder seats, investor seats, and independent directors.</div>
+    </div>
+    <div class="glossary-item" data-cat="governance">
+      <div class="glossary-term">Drag-Along Rights</div>
+      <span class="glossary-cat-tag">Governance</span>
+      <div class="glossary-def">A provision allowing majority shareholders to force minority shareholders to approve — and participate in — a sale of the company. This prevents a small group from blocking a strategic acquisition that the majority and board have approved.</div>
+    </div>
+    <div class="glossary-item" data-cat="governance">
+      <div class="glossary-term">Tag-Along Rights</div>
+      <span class="glossary-cat-tag">Governance</span>
+      <div class="glossary-def">The right for minority shareholders to join a sale if majority shareholders are selling their stake. They protect small investors from being left behind when larger shareholders exit at favourable terms.</div>
+    </div>
+    <div class="glossary-item" data-cat="governance">
+      <div class="glossary-term">Protective Provisions</div>
+      <span class="glossary-cat-tag">Governance</span>
+      <div class="glossary-def">Veto rights granted to preferred stockholders over certain major company decisions — such as raising more capital, selling the company, or issuing new share classes. These ensure VCs have a meaningful check on decisions that could negatively affect their investment.</div>
+    </div>
+    <div class="glossary-item" data-cat="metrics">
+      <div class="glossary-term">ARR / MRR</div>
+      <span class="glossary-cat-tag">Metrics</span>
+      <div class="glossary-def">Annual Recurring Revenue and Monthly Recurring Revenue — the bedrock metrics for SaaS businesses. VCs use ARR multiples (often 5–15x for fast-growing SaaS) to anchor valuations. Growth rate and predictability matter as much as the absolute number.</div>
+    </div>
+    <div class="glossary-item" data-cat="metrics">
+      <div class="glossary-term">Burn Rate & Runway</div>
+      <span class="glossary-cat-tag">Metrics</span>
+      <div class="glossary-def">Burn rate is the net cash a company spends each month. Runway = Cash ÷ Monthly Net Burn. VCs expect founders to maintain 12–18+ months of runway at all times. Fundraising with less than 6 months dramatically reduces negotiating leverage.</div>
+    </div>
+    <div class="glossary-item" data-cat="metrics">
+      <div class="glossary-term">LTV : CAC Ratio</div>
+      <span class="glossary-cat-tag">Metrics</span>
+      <div class="glossary-def">Lifetime Value to Customer Acquisition Cost. A ratio of 3:1 is the minimum healthy threshold; 5:1 is excellent. A low ratio means you're spending too much to acquire customers who don't stay long enough.</div>
+    </div>
+    <div class="glossary-item" data-cat="metrics">
+      <div class="glossary-term">NRR (Net Revenue Retention)</div>
+      <span class="glossary-cat-tag">Metrics</span>
+      <div class="glossary-def">The percentage of revenue retained from existing customers, accounting for expansions, contractions, and churn. NRR above 100% means existing customers are spending more over time. NRR of 130%+ (seen in Snowflake, Datadog) means the company can grow even without acquiring new customers.</div>
+    </div>
+    <div class="glossary-item" data-cat="metrics">
+      <div class="glossary-term">PMF (Product-Market Fit)</div>
+      <span class="glossary-cat-tag">Metrics</span>
+      <div class="glossary-def">The elusive state where a product genuinely solves a compelling problem for a well-defined market. Indicators include high retention, organic word-of-mouth growth, and customers who would be "very disappointed" without your product. Pre-PMF, all resources go to finding it; post-PMF, scale aggressively.</div>
+    </div>
+    <div class="glossary-item" data-cat="fund">
+      <div class="glossary-term">Management Fee</div>
+      <span class="glossary-cat-tag">Fund Mechanics</span>
+      <div class="glossary-def">The annual fee (typically 2% of committed capital) charged to LPs to cover the VC firm's operating expenses. On a $200M fund, this generates $4M/year. Real wealth for GPs comes from carried interest, not management fees.</div>
+    </div>
+    <div class="glossary-item" data-cat="fund">
+      <div class="glossary-term">Carried Interest ("Carry")</div>
+      <span class="glossary-cat-tag">Fund Mechanics</span>
+      <div class="glossary-def">The GP's share of the fund's profits — typically 20% — after returning invested capital to LPs. On a $200M fund returning $600M, LPs get $200M back first, then the $400M profit is split: $320M to LPs and $80M to GPs as carry.</div>
+    </div>
+    <div class="glossary-item" data-cat="fund">
+      <div class="glossary-term">Dry Powder</div>
+      <span class="glossary-cat-tag">Fund Mechanics</span>
+      <div class="glossary-def">The uninvested capital a fund has available to deploy. As of early 2025, US VC funds alone held $307.8B in dry powder — signalling significant pent-up investment demand ready to deploy as conditions improve.</div>
+    </div>
+    <div class="glossary-item" data-cat="fund">
+      <div class="glossary-term">Vintage Year</div>
+      <span class="glossary-cat-tag">Fund Mechanics</span>
+      <div class="glossary-def">The year a VC fund began investing. Vintage year is critically important for benchmarking performance — a fund deploying in 2009 vs. 2021 (peak valuations) experienced dramatically different market conditions and comparable returns.</div>
+    </div>
+    <div class="glossary-item" data-cat="exit">
+      <div class="glossary-term">IPO</div>
+      <span class="glossary-cat-tag">Exits</span>
+      <div class="glossary-def">Initial Public Offering — the process by which a private company lists its shares on a public stock exchange for the first time. The process involves months of preparation, SEC filings, a roadshow, and significant investment banking fees.</div>
+    </div>
+    <div class="glossary-item" data-cat="exit">
+      <div class="glossary-term">M&A (Acquisition)</div>
+      <span class="glossary-cat-tag">Exits</span>
+      <div class="glossary-def">Mergers & Acquisitions — when a company is purchased by another company or a private equity firm. M&A is the most common exit route in venture capital. Famous examples: Facebook acquiring Instagram for $1B (2012), Microsoft acquiring GitHub for $7.5B (2018).</div>
+    </div>
+    <div class="glossary-item" data-cat="exit">
+      <div class="glossary-term">DPI & TVPI</div>
+      <span class="glossary-cat-tag">Exits</span>
+      <div class="glossary-def">DPI (Distributions to Paid-In capital) measures actual cash returned to LPs vs. capital invested — the only metric that truly matters. TVPI adds unrealised paper value. A fund with 2x DPI has returned twice the invested capital in cash.</div>
+    </div>
+    <div class="glossary-item" data-cat="exit">
+      <div class="glossary-term">Unicorn / Decacorn</div>
+      <span class="glossary-cat-tag">Exits</span>
+      <div class="glossary-def">A unicorn is a private startup valued at $1B or more — a term coined by Aileen Lee in 2013. As of 2025, India alone has 118 unicorns. A decacorn is valued at $10B+; a hectocorn at $100B+.</div>
+    </div>
+    <div class="glossary-item" data-cat="exit">
+      <div class="glossary-term">Secondary Sale</div>
+      <span class="glossary-cat-tag">Exits</span>
+      <div class="glossary-def">The sale of existing shares by an investor or founder to a third party buyer, without the company raising new capital. Secondary markets (Forge, Nasdaq Private Market) have become an important liquidity mechanism for late-stage companies with IPO delays.</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="section-label">Chapter 09</div>
+  <h2 class="section-title">How to <em>Approach</em> Venture Capital</h2>
+  <p class="section-lead">Whether you're a founder raising your first round or an investor evaluating the industry, these principles distil the hard-won wisdom of thousands of deals.</p>
+  <div class="approach-grid fade-in">
+    <div class="approach-left">
+      <h3>What VCs Are Really Evaluating</h3>
+      <p>Beneath the polished frameworks and financial models, venture capital is fundamentally a judgment business. VCs are making high-conviction bets on people, markets, and timing — often with limited information. Understanding what matters most can transform how you present your company.</p>
+      <p>The single most important thing is the quality of the founding team. VCs know that markets shift, products pivot, and strategies evolve — but exceptional founders figure it out. After team: a large and growing market, a product that customers genuinely love, and unit economics that suggest the business can scale profitably.</p>
+      <ul class="checklist">
+        <li><span class="check-icon"></span>Build genuine relationships with investors before you need capital — warm introductions convert at 10x the rate of cold outreach</li>
+        <li><span class="check-icon"></span>Know your numbers cold — burn rate, runway, MoM growth, LTV:CAC, NRR — and be ready to explain the story behind each metric</li>
+        <li><span class="check-icon"></span>Target investors who have backed companies in your sector and stage — a specialist is worth far more than a generalist writing a cheque</li>
+        <li><span class="check-icon"></span>Create competitive tension — running a tight, time-boxed process with multiple interested firms produces better outcomes than sequential approaches</li>
+        <li><span class="check-icon"></span>Hire a startup lawyer before signing anything — protective provisions matter far more than valuation at exit</li>
+        <li><span class="check-icon"></span>Do your own diligence on potential investors — reference calls with their portfolio founders are as important as the diligence they do on you</li>
+      </ul>
+    </div>
+    <div>
+      <div class="do-dont">
+        <div class="do-box">
+          <h4>Do</h4>
+          <ul>
+            <li>Tell a clear, concise story in your pitch</li>
+            <li>Show genuine passion for the problem</li>
+            <li>Be honest about risks and unknowns</li>
+            <li>Demonstrate deep customer insight</li>
+            <li>Have a specific use of funds plan</li>
+            <li>Know your competitive landscape cold</li>
+            <li>Present a realistic path to exit</li>
+            <li>Have a strong reference network ready</li>
+            <li>Negotiate on terms, not just valuation</li>
+            <li>Maintain consistent investor communication</li>
+          </ul>
+        </div>
+        <div class="dont-box">
+          <h4>Don't</h4>
+          <ul>
+            <li>Claim you have "no competition"</li>
+            <li>Project hockey-stick growth without basis</li>
+            <li>Over-engineer the pitch deck design</li>
+            <li>Approach investors without a warm intro</li>
+            <li>Take the first term sheet without shopping</li>
+            <li>Agree to terms you don't understand</li>
+            <li>Focus solely on valuation, ignore terms</li>
+            <li>Delay fundraising until you're desperate</li>
+            <li>Give a board seat too early or cheaply</li>
+            <li>Confuse revenue with bookings or GMV</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bcg-card" style="margin-top:20px;">
+        <h4>The VC Selection Framework</h4>
+        <p>Not all money is equal. When choosing between investors, evaluate: (1) Relevant portfolio experience — have they built this type of company before? (2) Network quality in your sector. (3) Board behaviour — do founders speak highly post-investment? (4) Reserve capital — will they follow on in future rounds? (5) Fund stage and vintage — is there enough life left in the fund to support you to exit?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <div class="footer-brand-dot"></div>
+        Venture Capital Guide
+      </div>
+      <p class="footer-tagline">A comprehensive, plain-language guide to one of the world's most consequential and least understood industries — with a dedicated focus on India's emerging ecosystem.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Contents</h5>
+      <ul>
+        <li onclick="document.querySelector('#what').scrollIntoView({behavior:'smooth'})">What is Venture Capital?</li>
+        <li onclick="document.querySelector('#ecosystem').scrollIntoView({behavior:'smooth'})">The Ecosystem</li>
+        <li onclick="document.querySelector('#stages').scrollIntoView({behavior:'smooth'})">Funding Stages</li>
+        <li onclick="document.querySelector('#process').scrollIntoView({behavior:'smooth'})">The Deal Process</li>
+        <li onclick="document.querySelector('#players').scrollIntoView({behavior:'smooth'})">Landmark Firms</li>
+        <li onclick="document.querySelector('#market').scrollIntoView({behavior:'smooth'})">Market Data</li>
+        <li onclick="document.querySelector('#india').scrollIntoView({behavior:'smooth'})">India VC</li>
+        <li onclick="document.querySelector('#glossary').scrollIntoView({behavior:'smooth'})">Glossary</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Key Concepts</h5>
+      <ul>
+        <li>The Power Law</li>
+        <li>LP / GP Structure</li>
+        <li>Carried Interest</li>
+        <li>Liquidation Preferences</li>
+        <li>Anti-Dilution Protection</li>
+        <li>Pro-Rata Rights</li>
+        <li>Product-Market Fit</li>
+        <li>Burn Rate & Runway</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Venture Capital Guide · Compiled for educational purposes</div>
+    <div class="footer-disclaimer">This guide is for educational purposes only and does not constitute financial, investment, or legal advice. Market data sourced from KPMG, NVCA, Bain & Company, IVCA, PitchBook, and public disclosures.</div>
+  </div>
+</footer>
+
+<script>
+  // Glossary filter
+  function filterGlossary(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.glossary-item').forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+
+  // India tabs
+  function switchTab(tab, btn) {
+    document.querySelectorAll('.india-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.india-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  // Scroll fade-in
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  // Nav active highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      const isActive = a.getAttribute('href') === '#' + current;
+      a.style.color = isActive ? 'var(--green)' : '';
+      a.style.borderBottomColor = isActive ? 'var(--green)' : 'transparent';
+    });
+  });
+
+  // Hero stat counter animation
+  function animateCount(el, target, prefix, suffix, decimals) {
+    const original = el.textContent;
+    let start = null;
+    const dur = 1600;
+    const step = ts => {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = eased * target;
+      el.textContent = prefix + (decimals ? val.toFixed(2) : Math.floor(val).toLocaleString()) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const heroStatEls = document.querySelectorAll('.hero-stat-value');
+  const heroObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCount(heroStatEls[0], 368, '$', 'B', false);
+      animateCount(heroStatEls[1], 35684, '', '', false);
+      animateCount(heroStatEls[2], 57, '', '%', false);
+      animateCount(heroStatEls[3], 1.25, '$', 'T', true);
+      heroObs.disconnect();
+    }
+  }, { threshold: 0.5 });
+  if (heroStatEls[0]) heroObs.observe(heroStatEls[0]);
+</script>
+</body>
+</html>
